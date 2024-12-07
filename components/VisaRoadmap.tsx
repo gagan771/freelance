@@ -16,31 +16,33 @@ export function VisaRoadmap() {
   ]
 
   return (
-    <div className="w-full max-w-3xl mx-auto p-6 space-y-8">
-      <div className="text-center space-y-4">
-        <h1 className="text-3xl font-bold text-gray-900">Here's your Georgia visa roadmap</h1>
-        <p className="text-gray-600">Follow these steps to get your visa</p>
-      </div>
+    <div className="fixed inset-0 bg-gradient-to-br from-black via-gray-800 to-white flex items-center justify-center p-4">
+      <div className="w-full max-w-md mx-auto p-4 bg-white/90 rounded-lg shadow-lg space-y-6">
+        <div className="text-center space-y-2">
+          <h1 className="text-2xl font-semibold text-gray-900">Here's your Georgia visa roadmap</h1>
+          <p className="text-gray-700 text-sm">Follow these steps to get your visa</p>
+        </div>
 
-      <div className="grid gap-4">
-        {steps.map((step, index) => (
-          <RoadmapStep
-            key={index}
-            number={index + 1}
-            title={step.title}
-            isActive={step.isActive}
-            isCompleted={index === 0}
-          />
-        ))}
-      </div>
+        <div className="grid gap-3">
+          {steps.map((step, index) => (
+            <RoadmapStep
+              key={index}
+              number={index + 1}
+              title={step.title}
+              isActive={step.isActive}
+              isCompleted={index === 0}
+            />
+          ))}
+        </div>
 
-      <Button 
-        size="lg" 
-        className="w-full max-w-md mx-auto block mt-8"
-        onClick={() => router.push("/travel-history")}
-      >
-        Get Started
-      </Button>
+        <Button 
+          size="lg" 
+          className="w-full max-w-md mx-auto block mt-6"
+          onClick={() => router.push("/travel-history")}
+        >
+          Get Started
+        </Button>
+      </div>
     </div>
   )
 }
