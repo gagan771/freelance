@@ -48,4 +48,5 @@ Open your browser and navigate to:
 - Verify your internet connection
 
 - ## Contact
-Your Name - gaganbhardwaj514@gmail.com
+ - gaganbhardwaj514@gmail.com
+ - https://gaganbhardwaj.netlify.app/
